@@ -1,3 +1,11 @@
+import Header from './components/Header';
+import './globals.css';
+
+export const metadata = {
+  title: 'VAI - Interactive 3D Website',
+  description: 'A website with interactive 3D elements using Three.js',
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -5,12 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   )
-}
-
-export const metadata = {
-  title: 'Interactive 3D Website',
-  description: 'A website with interactive 3D elements using Three.js',
 } 
